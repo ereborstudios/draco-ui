@@ -6,6 +6,48 @@ Design your UI using a simple declarative layout syntax and contribute back by a
 
 ![Demo](https://raw.githubusercontent.com/ereborstudios/draco-ui/main/examples/demo/demo.gif)
 
+## Example
+
+A quick code sample, just to give you an idea...
+
+```ruby
+panel {
+  width 600
+  height 600
+
+  layout {
+    align :center
+    space :evenly
+    padding 32
+
+    label {
+      text 'Panel'
+      size 42
+      font 'fonts/kenney-fonts/blocks.ttf'
+    }
+
+    label {
+      text 'This is a panel'
+      size 4
+      padding 0
+      font 'fonts/kenney-fonts/pixel.ttf'
+    }
+
+    button {
+      text 'Quit Game'
+      variant :red
+      size 16
+      padding 24
+      on_click ->(entity, world, args) {
+        $gtk.request_quit
+      }
+    }
+  }
+}
+```
+
+Check the `examples/` directory for a complete demo containing several more examples you can learn from.
+
 ---
 
 ## Installation
@@ -24,7 +66,7 @@ $ smaug add kenney-ui-pack
 $ smaug add kenney-fonts
 ```
 
-### Install
+And then...
 
 ```bash
 $ smaug add draco-ui
