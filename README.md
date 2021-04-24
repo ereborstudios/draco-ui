@@ -1,4 +1,4 @@
-# Draco::UI
+# Draco UI
 
 > draco-ui is a quick and easy way to add overlay elements such as buttons and menus into your game.
 
