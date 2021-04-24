@@ -1,0 +1,14 @@
+[package]
+name = "draco-events"
+authors = ["Matt Pruitt <matt@guitsaru.com>"]
+version = "0.2.0"
+homepage = "https://github.com/guitsaru/draco-events"
+repository = "https://github.com/guitsaru/draco-events"
+
+requires = ["lib/draco/events.rb"]
+
+[package.installs]
+
+[dragonruby]
+version = "2.5"
+edition = "standard"

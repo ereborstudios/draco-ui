@@ -1,0 +1,19 @@
+[package]
+name = "draco-state"
+authors = ["Matt Pruitt <matt@guitsaru.com>"]
+version = "0.2.0"
+homepage = "https://github.com/guitsaru/draco-state"
+repository = "https://github.com/guitsaru/draco-state" 
+keywords = ["draco", "ECS"]
+
+# Optional:
+# documentation = "https://example.com"
+
+# Which files do you want to be automatically required from your package.
+requires = ["lib/draco/state.rb"]
+
+[package.installs]
+
+[dragonruby]
+version = "2.7"
+edition = "standard"

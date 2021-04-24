@@ -1,0 +1,30 @@
+[project]
+# The name of your game's executable. This should only contain a-z, A-Z, 0-9, _ or -.
+name = "draco-ui-demo"
+# The game's title. This will show up in the tile bar of your executable.
+title = "Draco UI Demo"
+version = "0.1.0"
+authors = ["Logan Koester <logan@logankoester.com>"]
+icon = "metadata/icon.png"
+
+[dragonruby]
+version = "2.10"
+edition = "pro"
+
+[itch]
+# The Project URL you set when you created the game on Itch.io. https://my-username.itch.io/my-game.
+# This will also be the name of your build files, so fill it out even if you aren't uploading to Itch.io.
+url = "todo-change-me"
+# Your username on Itch.io.
+username = "todo-change-me"
+
+[dependencies]
+draco = "0.6.1"
+draco-common = "0.1.1"
+draco-state = "0.2.0"
+draco-events = "0.2.0"
+draco-scenes = "0.2.0"
+color = "0.1.2"
+kenney-ui-pack = "1.0.0"
+kenney-fonts = "1.0.0"
+draco-ui = "../../"

@@ -1,0 +1,36 @@
+[package]
+name = "kenney-fonts"
+authors = ["Logan Koester <logan@logankoester.com>"]
+version = "1.0.0"
+homepage = "https://kenney.nl/assets/kenney-fonts"
+keywords = ["assets", "fonts"]
+
+# Optional:
+# documentation = "https://example.com"
+# repository = "http://github.com/example/example"
+
+# Which files do you want to be automatically required from your package.
+# requires = ["lib/library.rb"]
+
+
+[package.installs]
+# Example
+#
+# <from> = <to>
+# "lib/library.rb" = "app/lib/library.rb"
+
+"Kenney Blocks.ttf" = "fonts/kenney-fonts/blocks.ttf"
+"Kenney Future Narrow.ttf" = "fonts/kenney-fonts/future_narrow.ttf"
+"Kenney Future.ttf" = "fonts/kenney-fonts/future.ttf"
+"Kenney High Square.ttf" = "fonts/kenney-fonts/high_square.ttf"
+"Kenney High.ttf" = "fonts/kenney-fonts/high.ttf"
+"Kenney Mini Square.ttf" = "fonts/kenney-fonts/mini_square.ttf"
+"Kenney Mini.ttf" = "fonts/kenney-fonts/mini.ttf"
+"Kenney Pixel Square.ttf" = "fonts/kenney-fonts/pixel_square.ttf"
+"Kenney Pixel.ttf" = "fonts/kenney-fonts/pixel.ttf"
+"Kenney Rocket Square.ttf" = "fonts/kenney-fonts/rocket_square.ttf"
+"Kenney Rocket.ttf" = "fonts/kenney-fonts/rocket.ttf"
+
+[dragonruby]
+version = "2"
+edition = "standard"

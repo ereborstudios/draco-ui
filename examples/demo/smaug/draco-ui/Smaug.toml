@@ -1,0 +1,57 @@
+[package]
+name = "draco-ui"
+authors = ["Logan Koester <logan@logankoester.com>"]
+version = "0.1.0"
+homepage = "https://smaug.dev/draco-ui"
+keywords = []
+
+# Optional:
+# documentation = "https://example.com"
+repository = "http://github.com/ereborstudios/draco-ui"
+
+# Which files do you want to be automatically required from your package.
+# requires = ["lib/library.rb"]
+
+requires = [
+  "smaug/draco-ui/lib/set.rb",
+  "smaug/draco-ui/lib/docile.rb",
+  "smaug/draco-ui/lib/draco_ui.rb",
+  "app/components/draco-ui/index.rb",
+  "app/entities/draco-ui/index.rb",
+  "app/systems/draco-ui/index.rb",
+]
+
+
+[package.installs]
+# Example
+#
+# <from> = <to>
+# "lib/library.rb" = "app/lib/library.rb"
+"templates/app/components/button_label.rb" = "app/components/draco-ui/button_label.rb"
+"templates/app/components/centered.rb" = "app/components/draco-ui/centered.rb"
+"templates/app/components/clickable.rb" = "app/components/draco-ui/clickable.rb"
+"templates/app/components/layout_grid.rb" = "app/components/draco-ui/layout_grid.rb"
+"templates/app/components/stateful_sprite.rb" = "app/components/draco-ui/stateful_sprite.rb"
+"templates/app/components/text.rb" = "app/components/draco-ui/text.rb"
+"templates/app/components/tree.rb" = "app/components/draco-ui/tree.rb"
+"templates/app/components/index.rb" = "app/components/draco-ui/index.rb"
+
+"templates/app/entities/button.rb" = "app/entities/draco-ui/button.rb"
+"templates/app/entities/label.rb" = "app/entities/draco-ui/label.rb"
+"templates/app/entities/layout.rb" = "app/entities/draco-ui/layout.rb"
+"templates/app/entities/panel.rb" = "app/entities/draco-ui/panel.rb"
+"templates/app/entities/index.rb" = "app/entities/draco-ui/index.rb"
+
+"templates/app/systems/click.rb" = "app/systems/draco-ui/click.rb"
+"templates/app/systems/focus.rb" = "app/systems/draco-ui/focus.rb"
+"templates/app/systems/mouse_focus.rb" = "app/systems/draco-ui/mouse_focus.rb"
+"templates/app/systems/position_alignment.rb" = "app/systems/draco-ui/position_alignment.rb"
+"templates/app/systems/position_layout.rb" = "app/systems/draco-ui/position_layout.rb"
+"templates/app/systems/render_button_labels.rb" = "app/systems/draco-ui/render_button_labels.rb"
+"templates/app/systems/render_labels.rb" = "app/systems/draco-ui/render_labels.rb"
+"templates/app/systems/sprite_state.rb" = "app/systems/draco-ui/sprite_state.rb"
+"templates/app/systems/index.rb" = "app/systems/draco-ui/index.rb"
+
+[dragonruby]
+version = "2"
+edition = "standard"

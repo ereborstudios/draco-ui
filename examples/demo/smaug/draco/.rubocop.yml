@@ -1,0 +1,14 @@
+Metrics/BlockLength:
+  Exclude:
+    - "Rakefile"
+    - "spec/**/*.rb"
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "benchmark.rb"
+    - "samples/**/*.rb"
+    - "template/**/*.rb"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

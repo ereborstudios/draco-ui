@@ -1,0 +1,7 @@
+require 'app/components/draco-ui/centered.rb'
+require 'app/components/draco-ui/button_label.rb'
+require 'app/components/draco-ui/stateful_sprite.rb'
+require 'app/components/draco-ui/tree.rb'
+require 'app/components/draco-ui/layout_grid.rb'
+require 'app/components/draco-ui/clickable.rb'
+require 'app/components/draco-ui/text.rb'

@@ -1,0 +1,28 @@
+[project]
+name = "color-example"
+title = "color-example"
+version = "0.1.0"
+authors = ["Logan Koester <logan@logankoester.com>"]
+icon = "metadata/icon.png"
+url = "https://smaug.dev/color"
+
+[dragonruby]
+version = "1.26"
+edition = "pro"
+
+[itch]
+# The Project URL you set when you created the game on Itch.io. https://my-username.itch.io/my-game.
+# This will also be the name of your build files, so fill it out even if you aren't uploading to Itch.io.
+url = "color-example"
+# Your username on Itch.io.
+username = "logankoester"
+
+[dependencies]
+color = "../"
+
+# Dependency Examples
+# draco = "https://github.com/guitsaru/draco.git"
+# branch = { repo = "https://github.com/guitsaru/draco.git", branch = "main" }
+# local = "../dependency/"
+# zipped = "../dependency.zip"
+# download = "https://example.com/download.zip"

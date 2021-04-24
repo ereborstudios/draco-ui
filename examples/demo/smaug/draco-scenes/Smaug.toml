@@ -1,0 +1,19 @@
+[package]
+name = "draco-scenes"
+authors = ["Matt Pruitt <matt@guitsaru.com>"]
+version = "0.2.0"
+homepage = "https://github.com/guitsaru/draco-scenes"
+repository = "https://github.com/guitsaru/draco-scenes"
+keywords = ["draco", "ECS"]
+
+# Optional:
+# documentation = "https://example.com"
+
+# Which files do you want to be automatically required from your package.
+requires = ["lib/draco/scenes.rb"]
+
+[package.installs]
+
+[dragonruby]
+version = "2.5"
+edition = "standard"

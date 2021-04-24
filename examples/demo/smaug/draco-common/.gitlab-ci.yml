@@ -1,0 +1,44 @@
+stages:
+  - build
+  - upload
+  - release
+
+variables:
+  # Package version can only contain numbers (0-9), and dots (.).
+  # Must be in the format of X.Y.Z, i.e. should match /\A\d+\.\d+\.\d+\z/ regular expresion.
+  # See https://docs.gitlab.com/ee/user/packages/generic_packages/#publish-a-package-file
+  PACKAGE_VERSION: "0.1.0"
+  SMAUG_RELEASE: "${CI_PROJECT_NAME}-${PACKAGE_VERSION}.zip"
+  PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${PACKAGE_VERSION}"
+
+build:
+  stage: build
+  image: alpine:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - apk add zip
+    - mkdir release
+    - zip -r release/${SMAUG_RELEASE} app/* README.md Smaug.toml
+  artifacts:
+    paths:
+      - release/
+
+upload:
+  stage: upload
+  image: curlimages/curl:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - |
+      curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file release/${SMAUG_RELEASE} ${PACKAGE_REGISTRY_URL}/${SMAUG_RELEASE}
+
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - |
+      release-cli create --name "Release $CI_COMMIT_TAG" --tag-name $CI_COMMIT_TAG \
+        --assets-link "{\"name\":\"${SMAUG_RELEASE}\",\"url\":\"${PACKAGE_REGISTRY_URL}/${SMAUG_RELEASE}\"}"

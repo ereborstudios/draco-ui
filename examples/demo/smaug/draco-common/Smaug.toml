@@ -1,0 +1,48 @@
+[package]
+name = "draco-common"
+authors = ["Logan Koester <logan@logankoester.com>"]
+version = "0.1.1"
+url = "https://smaug.dev/draco-common"
+
+# Which files do you want to be automatically required from your package.
+# requires = ["lib/library.rb"]
+
+requires = [
+  "app/components/common/index.rb",
+  "app/entities/common/index.rb",
+  "app/systems/common/index.rb",
+  "app/worlds/common/index.rb",
+]
+
+[package.installs]
+# Example
+#
+# <from> = <to>
+# "lib/library.rb" = "app/lib/library.rb"
+
+# Components
+"app/components/animated.rb" = "app/components/common/animated.rb"
+"app/components/position.rb" = "app/components/common/position.rb"
+"app/components/rotation.rb" = "app/components/common/rotation.rb"
+"app/components/size.rb"     = "app/components/common/size.rb"
+"app/components/speed.rb"    = "app/components/common/speed.rb"
+"app/components/sprite.rb"   = "app/components/common/sprite.rb"
+"app/components/visible.rb"  = "app/components/common/visible.rb"
+"app/components/index.rb"    = "app/components/common/index.rb"
+
+# Entities
+"app/entities/camera.rb"         = "app/entities/common/camera.rb"
+"app/entities/index.rb"          = "app/entities/common/index.rb"
+
+# Systems
+"app/systems/animate.rb"         = "app/systems/common/animate.rb"
+"app/systems/render_sprites.rb"  = "app/systems/common/render_sprites.rb"
+"app/systems/index.rb"           = "app/systems/common/index.rb"
+
+# Worlds
+"app/worlds/world.rb"           = "app/worlds/common/world.rb"
+"app/worlds/index.rb"           = "app/worlds/common/index.rb"
+
+[dragonruby]
+version = "1.26"
+edition = "pro"

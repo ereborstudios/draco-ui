@@ -1,0 +1,30 @@
+[package]
+name = "color"
+version = "0.1.2"
+homepage = "https://smaug.dev/packages/color"
+documentation = "https://smaug.dev/packages/color"
+authors = ["Logan Koester <logan@logankoester.com>"]
+keywords = ["colors"]
+
+requires = [
+  "smaug/color/lib/color.rb",
+  "smaug/color/lib/color/rgb.rb",
+  "smaug/color/lib/color/hsl.rb",
+  "smaug/color/lib/color/palette.rb",
+  "smaug/color/lib/color/string.rb",
+  "smaug/color/lib/color/hash.rb"
+]
+
+# Which files do you want to be automatically required from your package.
+# requires = ["lib/library.rb"]
+
+[package.installs]
+
+# Example
+#
+# <from> = <to>
+# "lib/library.rb" = "app/lib/library.rb"
+
+[dragonruby]
+version = "2.7"
+edition = "pro"
