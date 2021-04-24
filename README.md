@@ -4,6 +4,8 @@
 
 Design your UI using a simple declarative layout syntax and contribute back by adding new widgets to our growing library.
 
+![Demo](https://raw.githubusercontent.com/ereborstudios/draco-ui/main/examples/demo/demo.gif)
+
 ---
 
 ## Installation
