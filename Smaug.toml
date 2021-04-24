@@ -1,7 +1,7 @@
 [package]
 name = "draco-ui"
 authors = ["Logan Koester <logan@logankoester.com>"]
-version = "0.1.0"
+version = "0.1.1"
 homepage = "https://smaug.dev/draco-ui"
 keywords = []
 
