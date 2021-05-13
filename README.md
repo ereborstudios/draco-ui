@@ -166,8 +166,10 @@ Create a panel to display a visual container for your content.
 
 | Attribute | Default | Valid   | Note                        |
 |-----------|---------|---------|-----------------------------|
-| width     | 100     | Integer | Set the width of the panel  |
-| height    | 100     | Integer | Set the height of the panel |
+| width     | 100                                   | Integer       | Set the width of the panel  |
+| height    | 100                                   | Integer       | Set the height of the panel |
+| path      | sprites/kenney-ui-pack/blue_panel.png | Relative path | Sprite path for panel image |
+| color     |                                       | Color         | Tint color                  |
 
 #### Example
 

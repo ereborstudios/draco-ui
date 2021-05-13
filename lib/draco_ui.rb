@@ -4,6 +4,7 @@ module Draco
     def self.included(mod)
       mod.extend(ClassMethods)
       mod.prepend(InstanceMethods)
+      mod.instance_variable_set(:@default_panels, [])
     end
 
     module ClassMethods
@@ -45,6 +46,10 @@ module Draco
           end
           @entity
         end
+
+        def tag(t)
+          @entity.components << Draco.Tag(t).new
+        end
       end
 
       class ButtonBuilder < EntityBuilder
@@ -63,6 +68,7 @@ module Draco
 
       class PanelBuilder < EntityBuilder
         component :size, attributes: %w[width height]
+        component :sprite, attributes: %w[path color]
         nested :panel
         nested :layout, builder: :layout_builder
       end
