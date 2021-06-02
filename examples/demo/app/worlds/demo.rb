@@ -260,6 +260,49 @@ class Demo < Draco::World
   scene :scene5 do
     include Draco::UI
 
+    layout {
+      align :center
+      space :evenly
+      padding 32
+
+      label {
+        text "Progress"
+        size 10
+        font 'fonts/kenney-fonts/future.ttf'
+      }
+
+      progress {
+        width 400
+        height 42
+        speed 2
+        value -> { 90 }
+        max 100
+      }
+
+      progress {
+        width 200
+        height 21
+        speed 1
+        background 'sprites/draco-ui/progress/Bar_Background01.png'
+        fill 'sprites/draco-ui/progress/Bar_Background04.png'
+        value -> { 50 }
+      }
+
+      button {
+        text 'Continue'
+        variant :green
+        size 16
+        padding 24
+        on_click ->(entity, world, args) {
+          world.scene = :scene6
+        }
+      }
+    }
+  end
+
+  scene :scene6 do
+    include Draco::UI
+
     panel {
       width $gtk.args.grid.w - 90
       height 400

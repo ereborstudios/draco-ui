@@ -8,7 +8,7 @@ authors = ["Logan Koester <logan@logankoester.com>"]
 icon = "metadata/icon.png"
 
 [dragonruby]
-version = "2.10"
+version = "2.14"
 edition = "pro"
 
 [itch]
@@ -20,7 +20,7 @@ username = "todo-change-me"
 
 [dependencies]
 draco = "0.6.1"
-draco-common = "0.1.1"
+draco-common = "0.2.1"
 draco-state = "0.2.0"
 draco-events = "0.2.0"
 draco-scenes = "0.2.0"

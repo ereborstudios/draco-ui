@@ -1,8 +1,8 @@
 [package]
 name = "draco-ui"
 authors = ["Logan Koester <logan@logankoester.com>"]
-version = "0.2.1"
-homepage = "https://smaug.dev/draco-ui"
+version = "0.3.0"
+homepage = "https://smaug.dev/packages/draco-ui"
 keywords = []
 
 # Optional:
@@ -34,12 +34,15 @@ requires = [
 "templates/app/components/stateful_sprite.rb" = "app/components/draco-ui/stateful_sprite.rb"
 "templates/app/components/text.rb" = "app/components/draco-ui/text.rb"
 "templates/app/components/tree.rb" = "app/components/draco-ui/tree.rb"
+"templates/app/components/display_progress.rb" = "app/components/draco-ui/display_progress.rb"
 "templates/app/components/index.rb" = "app/components/draco-ui/index.rb"
 
 "templates/app/entities/button.rb" = "app/entities/draco-ui/button.rb"
 "templates/app/entities/label.rb" = "app/entities/draco-ui/label.rb"
 "templates/app/entities/layout.rb" = "app/entities/draco-ui/layout.rb"
 "templates/app/entities/panel.rb" = "app/entities/draco-ui/panel.rb"
+"templates/app/entities/progress.rb" = "app/entities/draco-ui/progress.rb"
+"templates/app/entities/progress_value.rb" = "app/entities/draco-ui/progress_value.rb"
 "templates/app/entities/index.rb" = "app/entities/draco-ui/index.rb"
 
 "templates/app/systems/click.rb" = "app/systems/draco-ui/click.rb"
@@ -50,7 +53,13 @@ requires = [
 "templates/app/systems/render_button_labels.rb" = "app/systems/draco-ui/render_button_labels.rb"
 "templates/app/systems/render_labels.rb" = "app/systems/draco-ui/render_labels.rb"
 "templates/app/systems/sprite_state.rb" = "app/systems/draco-ui/sprite_state.rb"
+"templates/app/systems/update_progress.rb" = "app/systems/draco-ui/update_progress.rb"
 "templates/app/systems/index.rb" = "app/systems/draco-ui/index.rb"
+
+"templates/sprites/progress/background_01.png" = "sprites/draco-ui/progres/background_01.png"
+"templates/sprites/progress/background_02.png" = "sprites/draco-ui/progres/background_02.png"
+"templates/sprites/progress/background_03.png" = "sprites/draco-ui/progres/background_03.png"
+"templates/sprites/progress/background_04.png" = "sprites/draco-ui/progres/background_04.png"
 
 [dragonruby]
 version = "2"
