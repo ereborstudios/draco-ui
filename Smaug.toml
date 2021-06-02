@@ -56,10 +56,10 @@ requires = [
 "templates/app/systems/update_progress.rb" = "app/systems/draco-ui/update_progress.rb"
 "templates/app/systems/index.rb" = "app/systems/draco-ui/index.rb"
 
-"templates/sprites/progress/background_01.png" = "sprites/draco-ui/progres/background_01.png"
-"templates/sprites/progress/background_02.png" = "sprites/draco-ui/progres/background_02.png"
-"templates/sprites/progress/background_03.png" = "sprites/draco-ui/progres/background_03.png"
-"templates/sprites/progress/background_04.png" = "sprites/draco-ui/progres/background_04.png"
+"templates/sprites/progress/background_01.png" = "sprites/draco-ui/progress/background_01.png"
+"templates/sprites/progress/background_02.png" = "sprites/draco-ui/progress/background_02.png"
+"templates/sprites/progress/background_03.png" = "sprites/draco-ui/progress/background_03.png"
+"templates/sprites/progress/background_04.png" = "sprites/draco-ui/progress/background_04.png"
 
 [dragonruby]
 version = "2"

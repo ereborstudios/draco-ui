@@ -7,6 +7,7 @@ This package adds some common components and systems to your Draco project to he
 ### Components
 
 * Animated
+* BelongsTo
 * Position
 * Rotation
 * Size
@@ -64,6 +65,8 @@ class Player < Draco::Entity
     { frames: 5, path: 'sprites/dragon-4.png' },
     { frames: 5, path: 'sprites/dragon-5.png' },
   ]
+
+  component BelongsTo, id: 1
 end
 
 class HelloWorld < Draco::World

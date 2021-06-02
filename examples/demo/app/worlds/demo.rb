@@ -1,6 +1,6 @@
 class Demo < Draco::World
-  include Draco::Events
   include Draco::Scenes
+  include Draco::Events
   include Draco::UI
   include Draco::Common::World
 
@@ -283,8 +283,8 @@ class Demo < Draco::World
         width 200
         height 21
         speed 1
-        background 'sprites/draco-ui/progress/Bar_Background01.png'
-        fill 'sprites/draco-ui/progress/Bar_Background04.png'
+        background 'sprites/draco-ui/progress/background_01.png'
+        fill 'sprites/draco-ui/progress/background_04.png'
         value -> { 50 }
       }
 

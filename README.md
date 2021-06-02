@@ -210,3 +210,31 @@ button {
   }
 }
 ```
+
+### Progress
+
+An animated progress bar.
+
+| Attribute | Default                                     | Valid            | Note                                 |
+|-----------|---------------------------------------------|------------------|--------------------------------------|
+| width     | 400                                         | Integer          | Set the width of the progress bar    |
+| height    | 42                                          | Integer          | Set the height of the progress bar   |
+| speed     | 1                                           | Integer          | Rate of change when animating        |
+| max       | 100                                         | Integer          | Maximum possible value in range      |
+| background| sprites/draco-ui/progress/background_01.png | Relative path    | Sprite path for background image     |
+| fill      | sprites/draco-ui/progress/background_03.png | Relative path    | Sprite path for fill image           |
+| value     | `-> { 0 }`                                  | Proc             | Returns the current value every tick |
+
+#### Example
+
+```ruby
+progress {
+  width 400
+  height 42
+  speed 1
+  max 100
+  background 'sprites/draco-ui/progress/background_01.png'
+  fill 'sprites/draco-ui/progress/background_04.png'
+  value -> { 90 }
+}
+```

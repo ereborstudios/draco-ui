@@ -1,8 +1,9 @@
 [package]
 name = "draco-common"
 authors = ["Logan Koester <logan@logankoester.com>"]
-version = "0.1.1"
-url = "https://smaug.dev/draco-common"
+version = "0.2.1"
+homepage = "https://smaug.dev/packages/draco-common"
+keywords = []
 
 # Which files do you want to be automatically required from your package.
 # requires = ["lib/library.rb"]
@@ -22,6 +23,7 @@ requires = [
 
 # Components
 "app/components/animated.rb" = "app/components/common/animated.rb"
+"app/components/belongs_to.rb" = "app/components/common/belongs_to.rb"
 "app/components/position.rb" = "app/components/common/position.rb"
 "app/components/rotation.rb" = "app/components/common/rotation.rb"
 "app/components/size.rb"     = "app/components/common/size.rb"
@@ -44,5 +46,5 @@ requires = [
 "app/worlds/index.rb"           = "app/worlds/common/index.rb"
 
 [dragonruby]
-version = "1.26"
-edition = "pro"
+version = "2"
+edition = "standard"

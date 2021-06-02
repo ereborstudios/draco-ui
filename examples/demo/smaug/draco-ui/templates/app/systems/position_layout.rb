@@ -43,7 +43,8 @@ class PositionLayout < Draco::System
 
       child.components << Position.new(
         x: align(layout, parent, child),
-        y: y
+        y: y,
+        absolute: true
       )
     end
   end
@@ -59,7 +60,8 @@ class PositionLayout < Draco::System
 
       child.components << Position.new(
         x: align(layout, parent, child),
-        y: y
+        y: y,
+        absolute: true
       )
     end
   end
@@ -78,7 +80,8 @@ class PositionLayout < Draco::System
 
       child.components << Position.new(
         x: align(layout, parent, child),
-        y: y
+        y: y,
+        absolute: true
       )
 
       y -= space_per_child / 2
