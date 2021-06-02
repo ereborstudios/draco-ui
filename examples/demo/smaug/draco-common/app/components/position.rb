@@ -4,4 +4,6 @@ class Position < Draco::Component
 
   attribute :dx, default: 0
   attribute :dy, default: 0
+
+  attribute :absolute, default: false
 end

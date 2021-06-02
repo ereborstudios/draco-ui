@@ -4,6 +4,7 @@ module Draco
     def self.included(mod)
       mod.extend(ClassMethods)
       mod.prepend(InstanceMethods)
+      mod.instance_variable_set(:@default_panels, [])
     end
 
     module ClassMethods
@@ -45,6 +46,10 @@ module Draco
           end
           @entity
         end
+
+        def tag(t)
+          @entity.components << Draco.Tag(t).new
+        end
       end
 
       class ButtonBuilder < EntityBuilder
@@ -59,16 +64,24 @@ module Draco
         nested :panel, builder: :panel_builder
         nested :button, builder: :button_builder
         nested :label, builder: :label_builder
+        nested :progress, builder: :progress_builder
       end
 
       class PanelBuilder < EntityBuilder
         component :size, attributes: %w[width height]
+        component :sprite, attributes: %w[path color]
         nested :panel
         nested :layout, builder: :layout_builder
       end
 
       class LabelBuilder < EntityBuilder
         component :text, attributes: %w[text size padding font color]
+      end
+
+      class ProgressBuilder < EntityBuilder
+        component :size, attributes: %w[width height]
+        component :speed, attributes: %w[speed]
+        component :display_progress, attributes: %w[value max background fill]
       end
 
       def panel(&block)
@@ -93,6 +106,7 @@ module Draco
         end
 
         #@systems << RenderSprites
+        @systems << UpdateProgress
       end
 
       #def before_tick(context)
