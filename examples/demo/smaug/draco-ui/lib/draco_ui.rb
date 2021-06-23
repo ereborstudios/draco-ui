@@ -113,6 +113,13 @@ module Draco
         end
 
         #@systems << RenderSprites
+        @systems << RenderButtonLabels
+        @systems << RenderLabels
+        @systems << PositionAlignment
+        @systems << PositionLayout
+        @systems << MouseFocus
+        @systems << SpriteState
+        @systems << SlideEffect
         @systems << UpdateProgress
       end
 

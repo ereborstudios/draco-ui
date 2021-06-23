@@ -4,15 +4,7 @@ class Demo < Draco::World
   include Draco::UI
   include Draco::Common::World
 
-  systems RenderButtonLabels,
-          RenderLabels,
-          PositionAlignment,
-          PositionLayout,
-          MouseFocus,
-          SpriteState,
-          ChangeScene,
-          SlideEffect
-
+  systems ChangeScene
 
   default_scene :scene1
 
