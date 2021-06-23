@@ -33,6 +33,11 @@ class Demo < Draco::World
         size 12
         padding 18
         variant :yellow
+        icon {
+          width 48
+          height 48
+          path 'sprites/kenney-game-icons/black/2x/right.png'
+        }
         on_click ->(entity, world, args) {
           world.scene = :scene2
         }
@@ -115,6 +120,11 @@ class Demo < Draco::World
         }
         text 'Continue'
         variant :green
+        icon {
+          width 48
+          height 48
+          path 'sprites/kenney-game-icons/black/2x/right.png'
+        }
       }
     }
   end
@@ -132,9 +142,10 @@ class Demo < Draco::World
         space :start
         padding 32
 
-        button {
-          text 'Shrink'
-          variant :red
+        icon {
+          width 50
+          height 50
+          path 'sprites/kenney-game-icons/white/2x/smaller.png'
           on_click ->(entity, world, args) {
             size = entity.parent.parent.size
             size.width -= 5
@@ -148,9 +159,10 @@ class Demo < Draco::World
         space :start
         padding 32
 
-        button {
-          text 'Grow'
-          variant :yellow
+        icon {
+          width 50
+          height 50
+          path 'sprites/kenney-game-icons/white/2x/larger.png'
           on_click ->(entity, world, args) {
             size = entity.parent.parent.size
             size.width += 5
@@ -182,6 +194,11 @@ class Demo < Draco::World
           variant :green
           size 16
           padding 24
+          icon {
+            width 48
+            height 48
+            path 'sprites/kenney-game-icons/black/2x/right.png'
+          }
           on_click ->(entity, world, args) {
             world.scene = :scene4
           }
@@ -223,6 +240,11 @@ class Demo < Draco::World
         variant :green
         size 16
         padding 24
+        icon {
+          width 48
+          height 48
+          path 'sprites/kenney-game-icons/black/2x/right.png'
+        }
         on_click ->(entity, world, args) {
           world.scene = :scene5
         }
@@ -287,6 +309,11 @@ class Demo < Draco::World
         variant :green
         size 16
         padding 24
+        icon {
+          width 48
+          height 48
+          path 'sprites/kenney-game-icons/black/2x/right.png'
+        }
         on_click ->(entity, world, args) {
           world.scene = :scene6
         }
@@ -330,6 +357,11 @@ class Demo < Draco::World
         variant :green
         size 16
         padding 24
+        icon {
+          width 48
+          height 48
+          path 'sprites/kenney-game-icons/black/2x/right.png'
+        }
         on_click ->(entity, world, args) {
           world.scene = :scene7
         }
@@ -363,6 +395,11 @@ class Demo < Draco::World
           text 'Restart'
           variant :grey
           size 4
+          icon {
+            width 48
+            height 48
+            path 'sprites/kenney-game-icons/black/2x/rewind.png'
+          }
           on_click ->(entity, world, args) {
             world.scene = :scene1
           }

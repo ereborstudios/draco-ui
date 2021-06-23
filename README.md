@@ -64,6 +64,7 @@ $ smaug add draco-events
 $ smaug add color
 $ smaug add kenney-ui-pack
 $ smaug add kenney-fonts
+$ smaug add kenney-game-icons
 ```
 
 And then...
@@ -207,6 +208,34 @@ button {
   variant :green
   size 16
   padding 24
+  icon {
+    path 'sprites/kenney-game-icons/white/2x/larger.png'
+  }
+  on_click ->(entity, world, args) {
+    # ...Anything you want!
+  }
+}
+```
+
+### Icon
+
+A clickable icon without a label.
+
+| Attribute | Default | Valid            | Note                                                       |
+|-----------|---------|------------------|------------------------------------------------------------|
+| width     | 32      | Integer          | Set the width of the icon                                  |
+| height    | 32      | Integer          | Set the height of the icon                                 |
+| path      |         | Relative path    | Sprite path for icon image                                 |
+| color     |         | Color            | Tint color                                                 |
+| on_click  |         | Proc             | `->(entity, world, args) { #... }`                         |
+
+#### Example
+
+```ruby
+icon {
+  width 100
+  height 100
+  path 'sprites/kenney-game-icons/white/2x/larger.png'
   on_click ->(entity, world, args) {
     # ...Anything you want!
   }

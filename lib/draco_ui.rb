@@ -56,6 +56,13 @@ module Draco
         component :button_label, attributes: %w[text size padding]
         component :stateful_sprite, attributes: %w[variant]
         component :clickable, attributes: %w[on_click]
+        nested :icon, builder: :icon_builder
+      end
+
+      class IconBuilder < EntityBuilder
+        component :size, attributes: %w[width height]
+        component :sprite, attributes: %w[path color]
+        component :clickable, attributes: %w[on_click]
       end
 
       class LayoutBuilder < EntityBuilder
@@ -65,6 +72,7 @@ module Draco
         nested :button, builder: :button_builder
         nested :label, builder: :label_builder
         nested :progress, builder: :progress_builder
+        nested :icon, builder: :icon_builder
       end
 
       class PanelBuilder < EntityBuilder

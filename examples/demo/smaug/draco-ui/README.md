@@ -64,6 +64,7 @@ $ smaug add draco-events
 $ smaug add color
 $ smaug add kenney-ui-pack
 $ smaug add kenney-fonts
+$ smaug add kenney-game-icons
 ```
 
 And then...
@@ -134,6 +135,8 @@ Display single or multiple lines of text content.
 | padding   | 0                  | Integer                          | Add space to all sides of the label                                                                                                                                                |
 | font      | Subject to change  | Relative path to a TrueType font | _Not implemented_                                                                                                                                                                  |
 | color     | '#ffffff'.to_color | Color                            | Color may be expressed in any format understood by https://smaug.dev/packages/color/                                                                                               |
+| width     | 0                  | Integer                          | Width                                                                                                                                                                              |
+| height    | 42                 | Integer                          | Height                                                                                                                                                                             |
 
 #### Example
 
@@ -209,4 +212,51 @@ button {
     # ...Anything you want!
   }
 }
+```
+
+### Progress
+
+An animated progress bar.
+
+| Attribute | Default                                     | Valid            | Note                                 |
+|-----------|---------------------------------------------|------------------|--------------------------------------|
+| width     | 400                                         | Integer          | Set the width of the progress bar    |
+| height    | 42                                          | Integer          | Set the height of the progress bar   |
+| speed     | 1                                           | Integer          | Rate of change when animating        |
+| max       | 100                                         | Integer          | Maximum possible value in range      |
+| background| sprites/draco-ui/progress/background_01.png | Relative path    | Sprite path for background image     |
+| fill      | sprites/draco-ui/progress/background_03.png | Relative path    | Sprite path for fill image           |
+| value     | `-> { 0 }`                                  | Proc             | Returns the current value every tick |
+
+#### Example
+
+```ruby
+progress {
+  width 400
+  height 42
+  speed 1
+  max 100
+  background 'sprites/draco-ui/progress/background_01.png'
+  fill 'sprites/draco-ui/progress/background_04.png'
+  value -> { 90 }
+}
+```
+
+### Banner
+
+Display a notification message to the player.
+
+| Attribute | Default | Valid   | Note                        |
+|-----------|---------|---------|-----------------------------|
+| width     | 100                                   | Integer       | Set the width of the banner  |
+| height    | 100                                   | Integer       | Set the height of the banner |
+| path      | sprites/kenney-ui-pack/red_panel.png | Relative path | Sprite path for banner image |
+| color     |                                       | Color         | Tint color                   |
+
+#### Example
+
+```ruby
+Banner.notify do
+  label { text "This is a banner" }
+end
 ```

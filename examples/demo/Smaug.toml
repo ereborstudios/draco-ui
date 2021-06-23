@@ -20,11 +20,12 @@ username = "todo-change-me"
 
 [dependencies]
 draco = "0.6.1"
-draco-common = "0.2.1"
+draco-common = "0.3.0"
 draco-state = "0.2.0"
 draco-events = "0.2.0"
 draco-scenes = "0.2.0"
 color = "0.1.2"
 kenney-ui-pack = "1.0.0"
 kenney-fonts = "1.0.0"
+kenney-game-icons = "1.0.0"
 draco-ui = "../../"

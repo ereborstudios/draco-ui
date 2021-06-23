@@ -1,12 +1,12 @@
 class MouseFocus < Draco::System
-  filter ButtonLabel, Position
+  filter Clickable, Position
 
   def tick(args)
     return if entities.nil?
 
     current = world.scene || world
 
-    current.filter([ButtonLabel, Position]).each do |entity|
+    current.filter([Clickable, Position]).each do |entity|
       if args.inputs.mouse.point.inside_rect?(entity_rect(entity))
         unless entity.components[:focused]
           entity.components << Focused.new
