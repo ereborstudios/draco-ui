@@ -24,6 +24,10 @@ class ChangeScene < Draco::System
     if args.inputs.keyboard.key_down.six
       world.scene = :scene6
     end
+
+    if args.inputs.keyboard.key_down.seven
+      world.scene = :scene7
+    end
   end
 
 end

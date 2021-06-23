@@ -13,6 +13,7 @@ module Draco
 
           @systems << Animate
           @systems << RenderSprites
+          @systems << EntityDuration
         end
 
       end

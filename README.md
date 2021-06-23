@@ -134,6 +134,8 @@ Display single or multiple lines of text content.
 | padding   | 0                  | Integer                          | Add space to all sides of the label                                                                                                                                                |
 | font      | Subject to change  | Relative path to a TrueType font | _Not implemented_                                                                                                                                                                  |
 | color     | '#ffffff'.to_color | Color                            | Color may be expressed in any format understood by https://smaug.dev/packages/color/                                                                                               |
+| width     | 0                  | Integer                          | Width                                                                                                                                                                              |
+| height    | 42                 | Integer                          | Height                                                                                                                                                                             |
 
 #### Example
 
@@ -237,4 +239,23 @@ progress {
   fill 'sprites/draco-ui/progress/background_04.png'
   value -> { 90 }
 }
+```
+
+### Banner
+
+Display a notification message to the player.
+
+| Attribute | Default | Valid   | Note                        |
+|-----------|---------|---------|-----------------------------|
+| width     | 100                                   | Integer       | Set the width of the banner  |
+| height    | 100                                   | Integer       | Set the height of the banner |
+| path      | sprites/kenney-ui-pack/red_panel.png | Relative path | Sprite path for banner image |
+| color     |                                       | Color         | Tint color                   |
+
+#### Example
+
+```ruby
+Banner.notify do
+  label { text "This is a banner" }
+end
 ```

@@ -10,7 +10,9 @@ class Demo < Draco::World
           PositionLayout,
           MouseFocus,
           SpriteState,
-          ChangeScene
+          ChangeScene,
+          SlideEffect
+
 
   default_scene :scene1
 
@@ -303,6 +305,49 @@ class Demo < Draco::World
   scene :scene6 do
     include Draco::UI
 
+    layout {
+      label {
+        padding 0
+        text 'Banner'
+        size 42
+        color '#cca533ff'
+        font 'fonts/kenney-fonts/blocks.ttf'
+      }
+
+      button {
+        text 'Notify'
+        size 4
+        on_click ->(entity, world, args) {
+          Banner.notify 30, [Slide] do
+            path 'sprites/kenney-ui-pack/grey_panel.png'
+            color '#00a500'.to_color
+            width 520
+            height 120
+            label {
+              text "This is a banner"
+              size 8
+              font 'fonts/kenney-fonts/future.ttf'
+              color '#ffffff'.to_color
+            }
+          end
+        }
+      }
+
+      button {
+        text 'Continue'
+        variant :green
+        size 16
+        padding 24
+        on_click ->(entity, world, args) {
+          world.scene = :scene7
+        }
+      }
+    }
+  end
+
+  scene :scene7 do
+    include Draco::UI
+
     panel {
       width $gtk.args.grid.w - 90
       height 400
@@ -334,4 +379,5 @@ class Demo < Draco::World
 
     }
   end
+
 end

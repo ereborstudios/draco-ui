@@ -76,12 +76,19 @@ module Draco
 
       class LabelBuilder < EntityBuilder
         component :text, attributes: %w[text size padding font color]
+        component :size, attributes: %w[width height]
       end
 
       class ProgressBuilder < EntityBuilder
         component :size, attributes: %w[width height]
         component :speed, attributes: %w[speed]
         component :display_progress, attributes: %w[value max background fill]
+      end
+
+      class BannerBuilder < EntityBuilder
+        component :sprite, attributes: %w[path color]
+        component :size, attributes: %w[width height]
+        nested :label, builder: :label_builder
       end
 
       def panel(&block)
